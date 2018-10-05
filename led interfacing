@@ -1,0 +1,19 @@
+#include<pic.h>    // header file
+void delay(int k)  // delay function
+{
+int i,j;
+for(i=0;i<k;i++)
+for(j=0;j<1000;j++);
+ 
+}
+void main()          // main function
+{
+TRISA=0X00;
+TRISB=0X00;
+PORTA=0XFF;
+PORTB=0X00;
+delay(15);
+PORTB=0XFF;
+PORTA=0X00;
+delay(15);
+}
